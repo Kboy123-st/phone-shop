@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
-// ⚙️ API Base URL សម្រាប់ XAMPP Apache Direct
-const API_BASE = 'http://localhost/phone-shop/Backend/public/api';
+import { API_BASE } from '../api/config';
 
 const API_PRODUCTS = `${API_BASE}/products`;
 const API_SALES    = `${API_BASE}/sales`;

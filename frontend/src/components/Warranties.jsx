@@ -9,6 +9,7 @@ import {
   FiCheckCircle, 
   FiSearch 
 } from 'react-icons/fi';
+import { API_BASE } from '../api/config';
 
 export default function Warranties({ user }) {
   const [warranties, setWarranties] = useState([]);
@@ -26,8 +27,7 @@ export default function Warranties({ user }) {
     notes: ''
   });
 
-  // URL របស់ Backend Laravel
-  const API_BASE = 'http://localhost/phone-shop/Backend/public/api';
+  // URL របស់ Backend Laravel (មើល src/api/config.js)
 
   useEffect(() => {
     fetchWarranties();

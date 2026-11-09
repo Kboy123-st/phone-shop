@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { API_BASE } from '../api/config';
 
 function Products() {
   const [products, setProducts] = useState([]);
@@ -14,7 +15,7 @@ function Products() {
   const fetchProducts = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('http://localhost/phone-shop/Backend/public/api/products');
+      const response = await axios.get(`${API_BASE}/products`);
       setProducts(Array.isArray(response.data) ? response.data : []);
       setError(null);
     } catch (err) {

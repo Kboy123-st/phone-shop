@@ -19,10 +19,9 @@ import {
   Legend,
   Filler,
 } from 'chart.js';
+import { API_BASE } from '../api/config';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Legend, Filler);
-
-const API_BASE = process.env.REACT_APP_API_BASE_URL || 'http://127.0.0.1/phone-shop/Backend/public/api';
 
 const STATUS_COLORS = {
   pending: 'bg-amber-100 text-amber-700',

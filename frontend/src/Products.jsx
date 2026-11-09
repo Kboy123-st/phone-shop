@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { FiEdit, FiEye, FiTrash2, FiX } from 'react-icons/fi';
 import axios from 'axios';
+import { API_BASE, IMAGE_BASE } from './api/config';
 
-const API_URL = 'http://localhost/phone-shop/Backend/public/api/products';
-const IMAGE_BASE_URL = 'http://localhost/phone-shop/Backend/public/';
+const API_URL = `${API_BASE}/products`;
+const IMAGE_BASE_URL = `${IMAGE_BASE}/`;
 
 export default function Products() {
   const [products, setProducts] = useState([]);

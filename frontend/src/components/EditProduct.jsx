@@ -3,9 +3,10 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import toast from 'react-hot-toast';
 import { FiArrowLeft, FiSave } from 'react-icons/fi';
+import { API_BASE, IMAGE_BASE } from '../api/config';
 
-const API_URL = 'http://localhost/phone-shop/Backend/public/api/products';
-const IMAGE_BASE_URL = 'http://localhost/phone-shop/Backend/public/';
+const API_URL = `${API_BASE}/products`;
+const IMAGE_BASE_URL = `${IMAGE_BASE}/`;
 
 export default function EditProduct() {
   const { id } = useParams();

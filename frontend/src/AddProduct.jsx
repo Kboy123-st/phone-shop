@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { API_BASE } from './api/config';
 
 export default function AddProduct() {
   const [productName, setProductName] = useState('');
@@ -31,7 +32,7 @@ export default function AddProduct() {
 
     try {
       await axios.post(
-        'http://localhost/phone-shop/Backend/public/api/products',
+        `${API_BASE}/products`,
         formData,
         {
           headers: {

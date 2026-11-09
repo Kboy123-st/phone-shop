@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
-const API_BASE = 'http://localhost/phone-shop/Backend/public/api';
+import { API_BASE, IMAGE_BASE } from '../api/config';
 
 export default function ProductList({ onAddNew, onEdit }) {
   const [products, setProducts] = useState([]);
@@ -45,7 +44,7 @@ export default function ProductList({ onAddNew, onEdit }) {
     if (!imagePath) return null;
     if (imagePath.startsWith('http')) return imagePath;
     let cleanPath = imagePath.replace(/^\/+/, '');
-    return `http://localhost/phone-shop/Backend/public/${cleanPath}`;
+    return `${IMAGE_BASE}/${cleanPath}`;
   };
 
   // តម្រង Filter តាម Search & Category

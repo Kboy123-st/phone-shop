@@ -25,7 +25,7 @@ export default function Categories() {
       setCategories(list);
     } catch (err) {
       console.error('Error fetching categories:', err);
-      toast.error('មិនអាចទាញយកទិន្នន័យ Categories បានទេ!');
+      toast.error('មនអាចទាញយកទិន្នន័យ Categories បានទេ!');
     } finally {
       setLoading(false);
     }
